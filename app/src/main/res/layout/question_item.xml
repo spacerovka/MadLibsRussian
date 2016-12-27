@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Single List Item Design -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+	android:paddingTop="10dp">
+
+	<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	   android:id="@+id/question_title"
+	   android:layout_width="50%"
+	   android:layout_height="wrap_content"
+	   android:padding="10dip"
+	   android:textSize="16dip"
+	   android:textStyle="bold" >
+	</TextView>
+
+    <EditText
+        android:id="@+id/question_input"
+        android:inputType="text"
+       android:layout_width="50%"
+       android:layout_height="wrap_content">
+   </EditText>
+	
+</LinearLayout>

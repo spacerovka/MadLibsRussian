@@ -13,4 +13,13 @@
     <string name="action_settings">Settings</string>
 
     <string name="email_hint">email_hint</string>
+
+    <string name="button_new">New</string>
+    <string name="button_next">Next</string>
+    <string name="button_back">Back</string>
+    <string name="title">Title of a story</string>
+    <string name="text_lorem"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum eros risus, vel sodales lacus egestas at. Donec metus erat, laoreet id fermentum ut, sodales ac nibh. Sed ante justo, suscipit vel pretium vitae, aliquet sed neque. In et est arcu. Quisque sed sagittis lorem. Integer id suscipit ipsum. Pellentesque interdum eros nisl, dignissim efficitur ligula convallis a. Nam diam urna, cursus volutpat tempus non, aliquet nec ligula.
+
+Pellentesque finibus, magna at finibus ultricies, massa sem porttitor urna, vitae vestibulum neque magna ut purus. Vivamus condimentum pellentesque tortor id auctor. Fusce efficitur, risus vitae posuere tristique, est arcu auctor mi, pulvinar aliquet turpis nibh eu nisl. Sed bibendum urna condimentum nibh aliquet condimentum tristique quis sem. Etiam id justo ligula. Ut commodo tellus in neque interdum, vitae venenatis risus egestas. In hac habitasse platea dictumst. Ut bibendum at urna quis facilisis. Sed non nunc nec odio suscipit iaculis eu non dui. Donec tellus risus, sollicitudin at eleifend sit amet, pharetra id enim. Quisque vehicula, dui nec pellentesque pretium, quam est condimentum ante, in sollicitudin nunc nisl id metus. Cras sagittis justo ut egestas varius. Aenean rutrum purus sit amet lectus vestibulum, nec tempus nunc mattis. Sed non facilisis odio, a sagittis felis. Proin et augue nisl. </string>
+    <string name="q_title">Why?</string>
 </resources>
