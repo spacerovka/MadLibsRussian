@@ -2,14 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools" android:id="@+id/drawer_layout"
     android:layout_width="match_parent" android:layout_height="match_parent"
     tools:context=".ResultActivity">
-    <LinearLayout 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/sparkle_1"
+        android:scaleType="centerCrop" />
+    <LinearLayout
         android:id="@+id/text_layout"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingTop="10dp">
+    android:layout_height="match_parent"
+
+        >
 
       <TextView
          android:id="@+id/story_title"
@@ -17,44 +22,72 @@
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:padding="10dip"
-         android:textSize="16dip"
-         android:textStyle="bold" >
+         android:textSize="20dip"
+          android:textColor="@color/md_deep_purple_700"
+          android:gravity="center"
+          android:textStyle="bold"
+          android:background="#77FFFFFF">
       </TextView>
-      <TextView
-         android:id="@+id/story_content"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:text="@string/text_lorem"
-         android:padding="10dip"
-         android:textSize="16dip"
-         android:textStyle="bold" >
-      </TextView>
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/questions_list_row"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_weight="6"
+        android:layout_height="0dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+          <TextView
+             android:id="@+id/story_content"
+             android:layout_width="match_parent"
+             android:layout_height="fill_parent"
+             android:text="Lorem here"
+             android:padding="10dip"
+             android:textSize="16dip"
+             android:textStyle="bold" >
+          </TextView>
+        </ScrollView>
+     </LinearLayout>
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:orientation="horizontal"
+            android:layout_above="@+id/text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
 
+            <Button
+                android:id="@+id/to_questions_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_back"
+                android:onClick="goToQuestions"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/md_deep_purple_50"
+                android:background="@drawable/button"
+                />
+            <Button
+                android:id="@+id/to_main_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_new"
+                android:onClick="goToMain"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/md_deep_purple_50"
+                android:background="@drawable/button"
+                />
+
+
+        </LinearLayout>
   </LinearLayout>
-        
-    <LinearLayout 
-        android:id="@+id/button_layout"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingTop="10dp">
-
-        <Button
-        android:id="@+id/to_questions_button"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/button_back"
-          android:onClick="goToQuestions" />
-        <Button
-        android:id="@+id/to_main_button"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/button_new"
-          android:onClick="goToMain" />  
 
 
-    </LinearLayout>
 
 </RelativeLayout>

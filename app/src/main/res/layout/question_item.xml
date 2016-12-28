@@ -6,11 +6,14 @@
     android:layout_height="wrap_content"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-	android:paddingTop="10dp">
+	android:paddingTop="10dp"
+	>
 
 	<TextView xmlns:android="http://schemas.android.com/apk/res/android"
 	   android:id="@+id/question_title"
-	   android:layout_width="50%"
+		android:text="@string/q_title"
+		android:layout_width="110dp"
+		android:gravity="left"
 	   android:layout_height="wrap_content"
 	   android:padding="10dip"
 	   android:textSize="16dip"
@@ -20,7 +23,8 @@
     <EditText
         android:id="@+id/question_input"
         android:inputType="text"
-       android:layout_width="50%"
+		android:layout_width="180dp"
+		android:layout_gravity="left"
        android:layout_height="wrap_content">
    </EditText>
 	
