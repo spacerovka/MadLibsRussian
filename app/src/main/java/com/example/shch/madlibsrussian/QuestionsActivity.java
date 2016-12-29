@@ -1,5 +1,6 @@
 package com.example.shch.madlibsrussian;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +20,7 @@ public class QuestionsActivity extends AppCompatActivity {
 private Story story;
     private List<Question> questionsList;
     private ListView questionListView;
+    QuestionListAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,23 +40,23 @@ private Story story;
 
         questionsList = new ArrayList<Question>();
         populateArrayWithData(questionsList);
-        QuestionListAdapter adapter = new QuestionListAdapter(this, R.layout.question_item, questionsList);
+        adapter = new QuestionListAdapter(this, R.layout.question_item, questionsList);
         questionListView.setAdapter(adapter);
     }
 
     private void populateArrayWithData(List<Question> questionsList) {
         questionsList.add(new Question("Who?", "", "$1who"));
         questionsList.add(new Question("When?", "", "$2who"));
-        questionsList.add(new Question("Why?", "", "$3who"));
-        questionsList.add(new Question("Who?", "", "$1who"));
-        questionsList.add(new Question("When?", "", "$2who"));
-        questionsList.add(new Question("Why?", "", "$3who"));
-        questionsList.add(new Question("Who?", "", "$1who"));
-        questionsList.add(new Question("When?", "", "$2who"));
-        questionsList.add(new Question("Why?", "", "$3who"));
-        questionsList.add(new Question("Who?", "", "$1who"));
-        questionsList.add(new Question("When?", "", "$2who"));
-        questionsList.add(new Question("Why?", "", "$3who"));
+//        questionsList.add(new Question("Why?", "", "$3who"));
+//        questionsList.add(new Question("Who?", "", "$1who"));
+//        questionsList.add(new Question("When?", "", "$2who"));
+//        questionsList.add(new Question("Why?", "", "$3who"));
+//        questionsList.add(new Question("Who?", "", "$1who"));
+//        questionsList.add(new Question("When?", "", "$2who"));
+//        questionsList.add(new Question("Why?", "", "$3who"));
+//        questionsList.add(new Question("Who?", "", "$1who"));
+//        questionsList.add(new Question("When?", "", "$2who"));
+//        questionsList.add(new Question("Why?", "", "$3who"));
     }
 
     @Override
@@ -124,6 +127,16 @@ private Story story;
        // EditText editText = (EditText) findViewById(R.id.edit_message);
 //        String message = editText.getText().toString();
 //        intent.putExtra(EXTRA_MESSAGE, message);
+
+    String toastMessage="";
+        for (int i = 0; i < questionListView.getChildCount(); i++) {
+            EditText editText = (EditText) questionListView.getChildAt(i).findViewById(R.id.question_input);
+            adapter.getItem(i).setInput(editText.getText().toString());
+            toastMessage+=adapter.getItem(i).getTitle()+" : "+adapter.getItem(i).getInput();
+        }
+
+//        Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT)
+//             .show();
         intent.putExtra("STORY", story);
         startActivity(intent);
     }
