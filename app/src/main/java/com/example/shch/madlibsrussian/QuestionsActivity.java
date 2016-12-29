@@ -3,6 +3,7 @@ package com.example.shch.madlibsrussian;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +21,12 @@ private Story story;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.icon_brain);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setTitle(" MadLibs ");
+
         setContentView(R.layout.questions_list);
         TextView storyTitle = (TextView) findViewById(R.id.story_title);
         questionListView = (ListView) findViewById(R.id.questions_list_view);

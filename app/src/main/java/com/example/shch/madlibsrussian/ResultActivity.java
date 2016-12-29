@@ -3,6 +3,7 @@ package com.example.shch.madlibsrussian;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +16,12 @@ public class ResultActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.icon_brain);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setTitle(" MadLibs ");
+
         setContentView(R.layout.result);
         TextView storyTitle = (TextView) findViewById(R.id.story_title);
         TextView contentView = (TextView) findViewById(R.id.story_content);
